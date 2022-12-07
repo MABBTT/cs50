@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <table>
+        <thead>
+            <tr>
+                <th>Position</th>
+                <th>Shares</th>
+                <th>Current Price</th>
+                <th>Total Position Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for position in positions %}
+            <tr>
+                <td>{{position["position"]}}</td>
+                <td>{{position["shares"]}}</td>
+                <td>{{position["price"] | usd}}</td>
+                <td>{{position["value"] | usd}}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td>Cash Balance</td>
+                <td></td>
+                <td></td>
+                <td>{{availablecash | usd}}</td>
+            </tr>
+            <tr>
+                <td>Grand Total</td>
+                <td></td>
+                <td></td>
+                <td>{{grandtotal | usd}}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

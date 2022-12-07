@@ -1,0 +1,44 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    background-color: rgba(0,0,0,.4);
+}
+
+h1 {
+    color: white;
+}
+
+body {
+    background-image: url(trebimg.jpg);
+    background-size: 25rem;
+}
+
+.hidden_row {
+    display: none;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0,0,0,1);
+}
+
+#filtersearch {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.white-text {
+    color: white;
+    background-color: rgba(0,0,0,.4);
+}
+
+h3 {
+    text-align: center;
+}

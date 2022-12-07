@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Fastest overall for "sorted" text file types. Does not follow an exponential curve under best case scenario as n increases and is best representative of omega(n) in this test environment.
+
+sort2 uses: Merge Sort
+
+How do you know?: Fastest for "random" text file types. More importantly, most closely follows a logarithmic curve as n increases within each for the three text file types.
+
+sort3 uses: Selection Sort
+
+How do you know?: Faster than sort1 for “reversed" textfile types and most closely resembles an exponential curve across all three textfile types which resembles O(n^2).

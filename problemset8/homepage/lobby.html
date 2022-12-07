@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+        <script type="text/javascript">
+        function showHideRow(row) {
+            $("#" + row).toggle();
+        }
+        </script>
+    </head>
+    <header>
+        <h1 class="pagename">AOE2 LOBBY Prototype</h1>
+        <nav class="navbar navbar-expand-sm">
+            <div class="navbar-nav">
+                <a class="nav-link" href="lobby.html">Lobby</a>
+                <a class="nav-link" href="leaderboard.html">Leaderboards</a>
+                <a class="nav-link" href="spectate.html">Spectate</a>
+                <a class="nav-link" href="index.html">About</a>
+                <a class="nav-link" href="donate.html">Donate</a>
+            </div>
+        </nav>
+    </header>
+    <body>
+        <div id="filtersearch">
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#Filters" aria-controls="Filters">Filters
+            </button>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="Filters" aria-labelledby="Filters">
+                <select class="selectpicker" aria-label="Map selection">
+                    <option selected>Maps:</option>
+                    <option value="1">Black Forest</option>
+                </select>
+                <select class="form-select" aria-label="Speed selection">
+                    <option selected>Speed:</option>
+                    <option value="1">Normal</option>
+                    <option value="2">Fast</option>
+                </select>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Cheats</label>
+                </div>
+            </div>
+            <input type="text" placeholder="Search Lobbies"></input>
+        </div>
+        <div class="container-fluid">
+            <table class="table table-dark table-striped table-hover">
+                <thead>
+                    <th class="text-left">Average LR</th>
+                    <th>Title style</th>
+                    <th>Map</th>
+                    <th>Host</th>
+                    <th>Players</th>
+                    <th>Noob Status</th>
+                    <th>Join</th>
+                </thead>
+                <tr onclick="showHideRow('hidden_row1');">
+                    <td>2000</td>
+                    <td>4v4 BF Semi +</td>
+                    <td>Black Forest</td>
+                    <td>HOSTHARRY</td>
+                    <td>3/8</td>
+                    <td>Friendly</td>
+                    <td>Join CopyId</td>
+                    <table id="hidden_row1" class="hidden_row table table-secondary">
+                        <thead>
+                            <tr class="align-middle text-center">
+                                <th rowspan=2 colspan=2 style="width: 25%; text-align: left;">Players</th>
+                                <th rowspan=2 style="width: 15%;">Civ</th>
+                                <th rowspan=2 style="width: 5%;">Team</th>
+                                <th colspan=2 style="width: 10%;">Lobby Stats</th>
+                                <th colspan=2 style="width: 10%;">Matchmaking Stats</th>
+                                <th rowspan=2 colspan=2 style="width: 20%;">Settings</th>
+                            </tr>
+                            <tr class="text-center">
+                                <th>LR</th>
+                                <th>Map LR</th>
+                                <th>1v1</th>
+                                <th>TG</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center">
+                            <tr>
+                                <td style="text-align: left;">Blue</td>
+                                <td style="text-align: left;">Welcometo</td>
+                                <td>Burmese</td>
+                                <td>1</td>
+                                <td>1300</td>
+                                <td>1300</td>
+                                <td>1300</td>
+                                <td>1300</td>
+                                <td style="text-align: left;">Game Mode:</td>
+                                <td style="text-align: right;">Random Map</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">Red</td>
+                                <td style="text-align: left;">harry</td>
+                                <td>Burmese</td>
+                                <td>1</td>
+                                <td>1300</td>
+                                <td>1300</td>
+                                <td>1300</td>
+                                <td>1300</td>
+                                <td style="text-align: left;">Speed:</td>
+                                <td style="text-align: right;">Normal</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">?</td>
+                                <td style="text-align: left;">Open</td>
+                                <td>Random</td>
+                                <td>?</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td style="text-align: left;">Speed:</td>
+                                <td style="text-align: right;">Normal</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">?</td>
+                                <td style="text-align: left;">Open</td>
+                                <td>Random</td>
+                                <td>?</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td style="text-align: left;">Speed:</td>
+                                <td style="text-align: right;">Normal</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">?</td>
+                                <td style="text-align: left;">Open</td>
+                                <td>Random</td>
+                                <td>?</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td style="text-align: left;">Speed:</td>
+                                <td style="text-align: right;">Normal</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">?</td>
+                                <td style="text-align: left;">Open</td>
+                                <td>Random</td>
+                                <td>?</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td style="text-align: left;">Speed:</td>
+                                <td style="text-align: right;">Normal</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">?</td>
+                                <td style="text-align: left;">Open</td>
+                                <td>Random</td>
+                                <td>?</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td style="text-align: left;">Speed:</td>
+                                <td style="text-align: right;">Normal</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">?</td>
+                                <td style="text-align: left;">Open</td>
+                                <td>Random</td>
+                                <td>?</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td style="text-align: left;">Speed:</td>
+                                <td style="text-align: right;">Normal</td>
+                            </tr>
+                            <tr>
+                                <td colspan=2 style="text-align: left;">Recommended Team Balance:</td>
+                                <td colspan=4>p1=t1, p2=t1, p3=t1, p4=t1, p5=t2, p6=t2, p7=t2, p8=t2</td>
+                                <td colspan=2>Copy Teams</td>
+                                <td style="text-align: left;">Server:</td>
+                                <td style="text-align: right;">ukwest</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
